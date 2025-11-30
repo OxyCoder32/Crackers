@@ -4,15 +4,15 @@
 local function r0_0(r0_4)
   -- line: [0, 0] id: 4
   if r0_4 == "Assassin" then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/zorluaa/Void1/refs/heads/main/15"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/OxyCoder32/Crackers/refs/heads/main/Void%20Lua/games/Assasin.lua"))()
   elseif r0_4 == "Murder VS Sheriff Duels" then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/zorluaa/voidmvsd/refs/heads/main/mvsdvoid"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/OxyCoder32/Crackers/refs/heads/main/Void%20Lua/games/Murder%20VS%20Sheriff%20Duels.lua"))()
   elseif r0_4 == "Arsenal" then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/zorluaa/ArsenalVoid/refs/heads/main/VoidArsenal"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/OxyCoder32/Crackers/refs/heads/main/Void%20Lua/games/Arsenal.lua"))()
   elseif r0_4 == "Counter Blox" then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/zorluaa/CounterBLOXVOIDBETA/refs/heads/main/CBVOID", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/OxyCoder32/Crackers/refs/heads/main/Void%20Lua/games/Counter%20Blox.lua", true))()
   elseif r0_4 == "Prison Life" then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/zorluaa/VoidLUAZORPRISONLIFE/refs/heads/main/NewPRISONLIFE"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/OxyCoder32/Crackers/refs/heads/main/Void%20Lua/games/Prison%20Life.lua"))()
   else
     warn("No script available for this game.")
   end
@@ -77,7 +77,7 @@ local r9_0 = Instance.new("TextLabel")
 r9_0.Size = UDim2.new(1, -20, 1, -20)
 r9_0.Position = UDim2.new(0, 10, 0, 10)
 r9_0.BackgroundTransparency = 1
-r9_0.Text = "Update Log:\n\n• [+] Counter Blox [BETA]\n• [+] Prison Life [BETA]\n• Credits: Void Team\n• - Removed BGSI"
+r9_0.Text = "CRACKED BY:\n\n• [+] developed \n• [+] x3r0d4"
 r9_0.TextColor3 = Color3.fromRGB(255, 255, 255)
 r9_0.TextWrapped = true
 r9_0.Font = Enum.Font.Gotham
@@ -211,3 +211,4 @@ function r18_0()
   end
 end
 task.spawn(r18_0)
+
