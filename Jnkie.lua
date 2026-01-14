@@ -1,3 +1,6 @@
+-- USE THIS LIBRARY ONLY IN COMBINATION WITH AN OFFICIAL LOADSTRING AFTERWARDS
+-- THIS LIBRARY IS NOT SECURED
+
 local HttpService = game:GetService("HttpService")
 local httpRequest = (syn and syn.request) or request or http_request
 
@@ -15,9 +18,9 @@ function Junkie.check_key(key)
 			Url = Junkie.base_url .. "/verifyOpen",
 			Headers = {["Content-Type"] = "application/json"},
 			Body = HttpService:JSONEncode({
-				key = "Develop-41d58fa9-6275-4304-bad1-c8e6c283cc4a",
-				service = "Nexus",
-				identifier = "Nexus"
+				key = tostring(key or ""),
+				service = Junkie.service,
+				identifier = tostring(Junkie.identifier or "unknown")
 			})
 		})
 	
