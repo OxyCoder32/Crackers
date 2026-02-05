@@ -40,7 +40,7 @@ accta
 ata
 
 ]]
-local GuiLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/thelostsheep199-collab/d-DADSD-DV-DADCAdwxq/refs/heads/main/kabah6v2bs8bsk"))()
+local GuiLibrary = loadstring(game:HttpGet("https://github.com/OxyCoder32/Crackers/raw/refs/heads/main/SFY%20Hub/GuiLib.lua"))()
 local menu = GuiLibrary.new("SFY_Hub_library")
 
 local function showNotification(title, text, duration)
@@ -54,7 +54,7 @@ local function showNotification(title, text, duration)
     end)
 end
 
-menu:SetPremiumStatus(false)
+menu:SetPremiumStatus(true)
 
 -- Services
 local Services = {

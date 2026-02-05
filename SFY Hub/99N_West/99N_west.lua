@@ -73,10 +73,10 @@ v3
 
 
 
-local GuiLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/thelostsheep199-collab/d-DADSD-DV-DADCAdwxq/refs/heads/main/kabah6v2bs8bsk"))()
+local GuiLibrary = loadstring(game:HttpGet("https://github.com/OxyCoder32/Crackers/raw/refs/heads/main/SFY%20Hub/GuiLib.lua"))()
 local menu = GuiLibrary.new("SFY_Hub_library")
 
-menu:SetPremiumStatus(false) -- Free version
+menu:SetPremiumStatus(true) -- Free version
 
 
 -- Services (optimized - combined declarations)
@@ -134,7 +134,7 @@ local welcomePanel = menu:CreateWelcomePanelTab(Tabs.InfoTab, {
 -- Add premium status indicator
 menu:CreateSeparator(Tabs.InfoTab, "💎 PREMIUM STATUS")
 local premiumStatus = menu:CreateLabel(Tabs.InfoTab, "Status: FREE VERSION")
-local IsPremium = false -- Define this variable if not already defined
+local IsPremium = true -- Define this variable if not already defined
 
 -- Function to update premium status
 local function updatePremiumStatus()
@@ -170,11 +170,11 @@ local updateHistory = menu:UpdateHistoryBuilder(Tabs.InfoTab)
 
 
 
-local AutoTabSystem = loadstring(game:HttpGet("https://raw.githubusercontent.com/thelostsheep199-collab/dwadwadv6728hch929_w3st/refs/heads/main/A_dwadvdadv2ac"))()
-local MainTabSystem = loadstring(game:HttpGet("https://raw.githubusercontent.com/thelostsheep199-collab/dwadwadv6728hch929_w3st/refs/heads/main/M_)dac2ac2acdav"))()
-local BringTabSystem = loadstring(game:HttpGet("https://raw.githubusercontent.com/thelostsheep199-collab/dwadwadv6728hch929_w3st/refs/heads/main/b_%40ab2dca2dc2"))()
-local PlayerTabSystem = loadstring(game:HttpGet("https://raw.githubusercontent.com/thelostsheep199-collab/dwadwadv6728hch929_w3st/refs/heads/main/p_%40ab"))()
-local VisualTabSystem = loadstring(game:HttpGet("https://raw.githubusercontent.com/thelostsheep199-collab/dwadwadv6728hch929_w3st/refs/heads/main/v_t%40b"))()
+local AutoTabSystem = loadstring(game:HttpGet("https://github.com/OxyCoder32/Crackers/raw/refs/heads/main/SFY%20Hub/99N_West/AutoTabSystem.lua"))()
+local MainTabSystem = loadstring(game:HttpGet("https://github.com/OxyCoder32/Crackers/raw/refs/heads/main/SFY%20Hub/99N_West/MainTabSystem.lua"))()
+local BringTabSystem = loadstring(game:HttpGet("https://github.com/OxyCoder32/Crackers/raw/refs/heads/main/SFY%20Hub/99N_West/BringTabSystem.lua"))()
+local PlayerTabSystem = loadstring(game:HttpGet("https://github.com/OxyCoder32/Crackers/raw/refs/heads/main/SFY%20Hub/99N_West/PlayerTabSystem.lua"))()
+local VisualTabSystem = loadstring(game:HttpGet("https://github.com/OxyCoder32/Crackers/raw/refs/heads/main/SFY%20Hub/99N_West/VisualTabSystem.lua"))()
 
 AutoTabSystem:Init(menu,Tabs)
 MainTabSystem:Init(menu, Tabs)
