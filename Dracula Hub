@@ -1,4 +1,8 @@
 -- Cracked by Project X (https://discord.gg/dFqH5jtpqt)
+--[[
+If want know how it works, i only modified opcode 80
+if see the code that funct returns an true value
+]] 
 
 local function Io01lOI0()
 end;
