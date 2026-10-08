@@ -1769,7 +1769,7 @@ local p, q = pcall(function()
 
             if not d9 then
                 c6.needRod = true
-                c6.phase = 'couldnt cast - pull out your rod (hotbar slot 1)'
+                c6.phase = "couldn't cast - pull out your rod (hotbar slot 1)"
 
                 pcall(function()
                     bX.Anchored = false
@@ -2264,7 +2264,7 @@ local p, q = pcall(function()
         end)
         local dT = dS and (da ~= false and da ~= nil)
 
-        bc('Code ' .. dR .. ': ' .. (dT and 'redeemed' or 'failed' .. (db and ' - ' .. tostring(db):sub(1, 30) or '')), dT and 'good' or 'warn')
+        bc("Code '" .. dR .. "': " .. (dT and 'redeemed' or 'failed' .. (db and ' - ' .. tostring(db):sub(1, 30) or '')), dT and 'good' or 'warn')
 
         return dT
     end
@@ -2291,11 +2291,11 @@ local p, q = pcall(function()
 
     local dV = {
         ['Pick Up'] = 1,
-        ['Serve'] = 1,
-        ['Cook'] = 1,
+        Serve = 1,
+        Cook = 1,
         ['Make Meat'] = 1,
-        ['Deposit'] = 1,
-        ['Wash'] = 1,
+        Deposit = 1,
+        Wash = 1,
     }
 
     local function dW(dX)
@@ -3293,7 +3293,7 @@ local p, q = pcall(function()
 
             pcall(ff)
 
-            local fu = 'Crates held: ' .. (fe.held or 0) .. 'Found this session: ' .. (fe.found or 0) .. 'Decor collected: ' .. (fe.decor or 0) .. '/' .. #fd .. ((fe.decorList or '') ~= '' and '' .. fe.decorList or '') .. ((fe.active or 0) > 0 and 'Openable now: ' .. fe.active or '')
+            local fu = 'Crates held: ' .. (fe.held or 0) .. '\nFound this session: ' .. (fe.found or 0) .. '\nDecor collected: ' .. (fe.decor or 0) .. '/' .. #fd .. ((fe.decorList or '') ~= '' and '\n' .. fe.decorList or '') .. ((fe.active or 0) > 0 and '\nOpenable now: ' .. fe.active or '')
             local fv = {}
 
             for B, b7 in ipairs({
@@ -3339,7 +3339,7 @@ local p, q = pcall(function()
                 'Milk ' .. b2(eu('Milk')) .. '  Cheese ' .. b2(eu('Cheese')) .. '  Flour ' .. b2(eu('Flour')),
                 'Wheat ' .. b2(eu('Wheat')) .. '  Sugar ' .. b2(eu('Sugar')) .. '  Cane ' .. b2(eu('Sugar Cane')),
                 'Honey ' .. b2(eu('Honey')) .. '  Truffles ' .. b2(eu('Truffles')) .. '  Coconut ' .. b2(eu('Coconut')),
-            }, '')
+            }, '\n')
             local fA = {
                 fb('Cash', '$' .. b2(b0())),
                 fb('Diamonds', b2(eu('Diamonds'))),
@@ -3348,18 +3348,18 @@ local p, q = pcall(function()
                 fb('Fishing skill', ft),
                 fb('Rod in use', tostring(F._activeRod or F.fishRod or '-')),
                 fb('SUNKEN CRATES', fu, false),
-                fb('Fish caught', table.concat(fv, '')),
-                fb('Fishing setup', 'ice box ' .. (b5.boxFish or 0) .. 'cutters ' .. (b5.cutStations or 0) .. ' . fishers ' .. (b5.fishers or 0)),
-                fb('Processors', (eb.n or 0) .. ' active' .. tostring(eb.filling or 'off')),
+                fb('Fish caught', table.concat(fv, '\n')),
+                fb('Fishing setup', 'ice box ' .. (b5.boxFish or 0) .. '\ncutters ' .. (b5.cutStations or 0) .. ' . fishers ' .. (b5.fishers or 0)),
+                fb('Processors', (eb.n or 0) .. ' active\n' .. tostring(eb.filling or 'off')),
                 fb('Skills', 'Fishing ' .. (fq or '?') .. ' . Farming ' .. (f9('Farming') or '?') .. ' . Ranching ' .. (f9('Ranching') or '?')),
-                fb('Black Market', 'lvl ' .. tostring(select(3, aE()) or '?') .. '' .. fn),
+                fb('Black Market', 'lvl ' .. tostring(select(3, aE()) or '?') .. '\n' .. fn),
                 fb('Served', b2(ay.served or 0)),
                 fb('Harvested', b2(ay.harvested or 0)),
                 fb('Processed', b2(ay.processed or 0)),
                 fb('Market bought', b2(ay.bought or 0)),
                 fb('Trucks stocked', b2(ay.trucks or 0)),
                 fb('Earned / Spent', '+' .. b2(fj) .. ' / -' .. b2(fk)),
-                fb('Progression', 'Day ' .. (fw.day or '?') .. ' . streak ' .. (fw.streak or 0) .. 'Quests ' .. (fw.quests or 0) .. ' . Milestones ' .. (fw.miles or 0) .. 'Recipes ' .. (fw.recipes or 0) .. ' . Ingredients ' .. (fw.ingr or 0) .. 'Gnomes ' .. (fw.gnomes or 0) .. ' . Pets ' .. (fw.pets or 0), false),
+                fb('Progression', 'Day ' .. (fw.day or '?') .. ' . streak ' .. (fw.streak or 0) .. '\nQuests ' .. (fw.quests or 0) .. ' . Milestones ' .. (fw.miles or 0) .. '\nRecipes ' .. (fw.recipes or 0) .. ' . Ingredients ' .. (fw.ingr or 0) .. '\nGnomes ' .. (fw.gnomes or 0) .. ' . Pets ' .. (fw.pets or 0), false),
                 fb('Key resources', fz, false),
                 fb('Health', tostring(h.status or '?') .. ' . errs ' .. tostring(h.errs or 0)),
                 fb('Uptime', ax(fi)),
@@ -3411,7 +3411,7 @@ local p, q = pcall(function()
 
             if not fG then
                 f2.ok = false
-                f2.msg = 'couldnt build report'
+                f2.msg = "couldn't build report"
 
                 return false, f2.msg
             end
@@ -4763,8 +4763,8 @@ local p, q = pcall(function()
                 v = 'v18',
                 lines = {
                     'Webhook now reports EVERYTHING: sunken crates + decor collected, fishing level, fish by type, skills, progression, resources and health.',
-                    'Fixed Black Market auto-buy cant read stocks - it reads his stock reliably now and clears his whole shop.',
-                    'Added this Whats New bubble.',
+                    "Fixed Black Market auto-buy 'can't read stocks' - it reads his stock reliably now and clears his whole shop.",
+                    "Added this What's New bubble.",
                 },
             },
             {
@@ -4874,7 +4874,7 @@ local p, q = pcall(function()
             BackgroundTransparency = 1,
             Position = UDim2.new(0, 18, 0, 15),
             Size = UDim2.new(1, -60, 0, 22),
-            Text = 'Whats New',
+            Text = "What's New",
             TextColor3 = f.Txt,
             TextXAlignment = Enum.TextXAlignment.Left,
             FontFace = fS,
@@ -5006,7 +5006,7 @@ local p, q = pcall(function()
             fW('TextLabel', {
                 BackgroundTransparency = 1,
                 Size = UDim2.new(1, 0, 0, 12),
-                Text = 'â²',
+                Text = '\u{25b2}',
                 TextColor3 = fM,
                 FontFace = fT,
                 TextSize = 11,
@@ -6652,7 +6652,7 @@ local p, q = pcall(function()
         if F._applyDishFilter and (F.dishOnlyExp or F.dishOnlyCheap) then
             F._applyDishFilter()
         end
-        if F._dishDots and aj and aj.IsDisabled and eo == 'dishes' and hk['dishes'] and hk['dishes'].Visible then
+        if F._dishDots and aj and aj.IsDisabled and eo == 'dishes' and hk.dishes and hk.dishes.Visible then
             local eL, dv = 0, 0
 
             for bR, g4 in pairs(F._dishDots)do
@@ -8248,7 +8248,7 @@ local p, q = pcall(function()
             local fo = a2.GetCurrentCycle(df)
 
             if not fo then
-                hf('Black Market', 'Merchant isnt here yet.', 'warn')
+                hf('Black Market', "Merchant isn't here yet.", 'warn')
 
                 return
             end
@@ -8257,7 +8257,7 @@ local p, q = pcall(function()
             local j = 0
 
             if #j1 == 0 then
-                hf('Black Market', 'Couldnt read his stock (' .. tostring(j4) .. ').', 'warn')
+                hf('Black Market', "Couldn't read his stock (" .. tostring(j4) .. ').', 'warn')
 
                 return
             end
@@ -8337,7 +8337,7 @@ local p, q = pcall(function()
             local e6 = F._readTruck and F._readTruck()
 
             if not (e6 and #e6 > 0) then
-                hf('Truck', 'The truck isnt here right now.', 'warn')
+                hf('Truck', "The truck isn't here right now.", 'warn')
 
                 return
             end
@@ -8603,7 +8603,7 @@ local p, q = pcall(function()
             eK(H)
         end)
         hw(n, 'Keep me from going AFK', 'antiafk')
-        hw(n, 'Mute the games spam notifications', 'muteNotifs')
+        hw(n, "Mute the game's spam notifications", 'muteNotifs')
         hQ(n, 'Rejoin Server', function()
             hf('Server', 'Rejoining...', 'info')
             pcall(function()
@@ -8673,7 +8673,7 @@ local p, q = pcall(function()
         local n = hr('adv', 'Advanced', 'advanced')
 
         ht(n, 'Advanced Tuning')
-        hu(n, 'Applies live, no reload. Very low pacing (~10ms) can trip the servers rate limit.')
+        hu(n, "Applies live, no reload. Very low pacing (~10ms) can trip the server's rate limit.")
         hs(n, 'Helper Engine')
         hF(n, 'Serve / carry pace', 'carryMs', 10, 2000, 'ms', nil, 10)
         hF(n, 'Helper tick rate', 'helperTickMs', 20, 500, 'ms', nil, 10)
@@ -8863,7 +8863,7 @@ local p, q = pcall(function()
             pcall(function()
                 if listfiles then
                     for B, bs in ipairs(listfiles(I))do
-                        local iz = bs:match('([^/\]+)%.json$')
+                        local iz = bs:match('([^/\\]+)%.json$')
 
                         if iz and iz ~= '_last' and iz ~= '_stats' then
                             i[#i + 1] = iz
@@ -8887,7 +8887,7 @@ local p, q = pcall(function()
                 end
 
                 L('_last')
-                bc('Loaded preset ' .. j .. '', 'good')
+                bc("Loaded preset '" .. j .. "'", 'good')
                 bf()
 
                 return true
@@ -8991,8 +8991,8 @@ local p, q = pcall(function()
             jj.Text = ''
 
             jp()
-            bc('Saved preset ' .. iz .. '', 'good')
-            hf('Config', 'Saved preset ' .. iz .. '.', 'good')
+            bc("Saved preset '" .. iz .. "'", 'good')
+            hf('Config', "Saved preset '" .. iz .. "'.", 'good')
         end)
         jp()
     end
@@ -9142,7 +9142,7 @@ local p, q = pcall(function()
         local jF = fW('TextLabel', {
             BackgroundTransparency = 1,
             Size = UDim2.fromOffset(30, 30),
-            Text = 'â¶',
+            Text = '\u{25b6}',
             TextColor3 = fM,
             TextTransparency = 1,
             FontFace = fS,
@@ -9850,7 +9850,7 @@ local p, q = pcall(function()
                         'Stops the game kicking you for standing still',
                     },
                     {
-                        'Mute the games spam notifications',
+                        "Mute the game's spam notifications",
                         'Silences the repetitive warnings the game throws at you',
                     },
                 },
@@ -9930,7 +9930,7 @@ local p, q = pcall(function()
                     },
                     {
                         'Mute spam notifications',
-                        'Quietens the games repeated warnings',
+                        "Quietens the game's repeated warnings",
                     },
                     {
                         'Anti-AFK',
@@ -10061,12 +10061,12 @@ local p, q = pcall(function()
             if hJ(function()
                 k8('set')
             end) then
-                hg('Whats New', 'Every update is written up inside the menu', 2.6)
+                hg("What's New", 'Every update is written up inside the menu', 2.6)
 
                 local hp
 
                 for B, M in ipairs(S:GetDescendants())do
-                    if M:IsA('TextLabel') and M.Text == 'Whats New' then
+                    if M:IsA('TextLabel') and M.Text == "What's New" then
                         hp = M
 
                         break
@@ -11425,7 +11425,7 @@ local p, q = pcall(function()
                     hZ(j1)
                 end
 
-                X.bmSub.Text = #j1 > 0 and #j1 .. ' items in stock' or 'couldnt read his stock (' .. tostring(j4) .. ') - retrying'
+                X.bmSub.Text = #j1 > 0 and #j1 .. ' items in stock' or "couldn't read his stock (" .. tostring(j4) .. ') - retrying'
 
                 if bn('autoBuy') and #j1 > 0 and ly ~= fo.Index then
                     local lE, lF, lG = 0, 0, nil
@@ -11481,7 +11481,7 @@ local p, q = pcall(function()
                     elseif lG and lz ~= fo.Index then
                         lz = fo.Index
 
-                        hf('Youre broke!', 'Cant afford the rest of the Black Market (need $' .. b2(lG) .. '+). Earn cash and itll grab the rest automatically before he leaves.', 'warn')
+                        hf("You're broke!", "Can't afford the rest of the Black Market (need $" .. b2(lG) .. "+). Earn cash and it'll grab the rest automatically before he leaves.", 'warn')
 
                         X.bmSub.Text = 'BROKE - need $' .. b2(lG) .. ' for the rest'
                     end
@@ -11512,7 +11512,7 @@ local p, q = pcall(function()
     end
 
     b6(function()
-        if eo == 'staff' and hk['staff'] and hk['staff'].Visible and hY then
+        if eo == 'staff' and hk.staff and hk.staff.Visible and hY then
             hY()
         end
     end, 3)
